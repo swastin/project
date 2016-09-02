@@ -1,0 +1,47 @@
+<html>
+	<head><title>DYNAMIC COMBO BOX</title>
+            <script type="text/javascript">
+
+
+function addComb()
+		{
+			
+			var textb=document.getElementById("txtCombo").Value;
+			var cmb=document.getElementById("combo");
+			var option=document.createElement("option");
+			//option.text=textb;
+			option.Value=textb;
+			try{
+			  cmb.add(option,null);	
+			  cm.add(option,null);	
+			}
+                    catch{
+                        cmb.add(option);
+                        }
+			textb.Value=" ";
+		}
+
+
+		</script>
+</head>
+<body>
+	<form>
+	
+	<fieldset>
+	<legend>combo box</legend>
+	<label>add the element to combo</label>
+		<input type="text" name="txtCombo"id="txtCombo"></input>
+		<input type="button"value="addCombo()"> </input><br>
+	<label>COMBO BOX</label>
+
+    <select name="combo" id="combo"></select>
+    
+    
+    
+	</fieldset>
+	</form>
+	
+	
+	
+	</body>	
+</html>

@@ -1,0 +1,403 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="assets/css/styles.css">
+    	<link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    	<script src="assets/js/js/jquery-1.11.1.min.js"></script>
+	 <script language="javascript" type="text/javascript">
+           /* function urlRedirectTo(obj)
+			{
+				alert('You reached last step and selected '+obj);
+				//if('wordpress_version1' == obj)
+					//window.location = 'https://wordpress.org/download/';
+				//if('wordpress_version2' == obj)
+					//window.location = 'https://wordpress.org/download/';
+			}*/
+			function dynamicdropdown(listindex)
+            {
+                document.getElementById("sub_subcategory").length = 0;
+                document.getElementById("sub_subcategory").options[0]=new Option("Please select below option","");
+                document.getElementById("subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "pg" :
+                        document.getElementById("subcategory").options[0]=new Option("Please select the course","");
+		        document.getElementById("subcategory").options[1]=new Option("--------------------------","");
+                        document.getElementById("subcategory").options[2]=new Option("M.tech","M.tech");
+                        document.getElementById("subcategory").options[3]=new Option("MBA","MBA");
+			document.getElementById("subcategory").options[4]=new Option("MCA","MCA");
+		        document.getElementById("subcategory").options[5]=new Option("MSC","MSC");
+	                document.getElementById("subcategory").options[6]=new Option("others","others");	
+                        break;
+                    
+                    case "ug" :
+                          document.getElementById("subcategory").options[0]=new Option("Please select course","");
+	                  document.getElementById("subcategory").options[1]=new Option("--------------------------","");
+                          document.getElementById("subcategory").options[2]=new Option("Btech","B.tech");
+                          document.getElementById("subcategory").options[3]=new Option("BBA","BBA");
+			  document.getElementById("subcategory").options[4]=new Option("BCA","BCA");
+		          document.getElementById("subcategory").options[5]=new Option("BSC","BSC");
+		          document.getElementById("subcategory").options[6]=new Option("others","others");	
+                        break;
+			case "others":
+				 document.getElementById("sub_subcategory").options[0]=new Option("Please select branch","");
+		                 document.getElementById("sub_subcategory").options[1]=new Option("------------------------------","");
+				 document.getElementById("sub_subcategory").options[2]=new Option("others","others");
+				break;
+                    default:
+                        document.getElementById("subcategory").options[0]=new Option("Please select course","");
+                        break;
+                }
+                return true;
+            }
+            
+            function dynamicdropdownone(listindex)
+            {
+                document.getElementById("sub_subcategory").length = 0;
+                switch (listindex)
+                {
+                    case "B.tech" :
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+		        document.getElementById("sub_subcategory").options[1]=new Option("------------------------------","");
+                        document.getElementById("sub_subcategory").options[2]=new Option("Aplied Electronics Instrumentation","Aei");
+                        document.getElementById("sub_subcategory").options[3]=new Option("Electrical And Elecronic","eee");
+		        document.getElementById("sub_subcategory").options[4]=new Option("Biotechnology","Bt");
+                        document.getElementById("sub_subcategory").options[5]=new Option("Biomedical","bm");
+                        document.getElementById("sub_subcategory").options[6]=new Option("Chemical Engineering","chemical");
+	                document.getElementById("sub_subcategory").options[7]=new Option("Civil Engineering","civil");
+                        document.getElementById("sub_subcategory").options[8]=new Option("Computer Science Engineering","cse");
+                        document.getElementById("sub_subcategory").options[9]=new Option("Electrical Engineering","electrical");
+                        document.getElementById("sub_subcategory").options[10]=new Option("Electronics and Telcommunication","etc");
+                        document.getElementById("sub_subcategory").options[11]=new Option("Information Technology","it");
+                        document.getElementById("sub_subcategory").options[12]=new Option("Marine Engineering","marine");
+                        document.getElementById("sub_subcategory").options[13]=new Option("Mertalogical Engineering","mertalogical");
+                        document.getElementById("sub_subcategory").options[14]=new Option("Mechanical Engineering","Mechnical");
+                        document.getElementById("sub_subcategory").options[15]=new Option("Automobile Engineering","automobile");
+                        document.getElementById("sub_subcategory").options[16]=new Option(" Enviormental Engineering","enviormental");
+                        document.getElementById("sub_subcategory").options[17]=new Option("plastic Engineering","Plastic");
+                        document.getElementById("sub_subcategory").options[18]=new Option("Mineral Engineering","Mineral");
+                        document.getElementById("sub_subcategory").options[19]=new Option("Fashion Engineering","Fashion");
+                        document.getElementById("sub_subcategory").options[20]=new Option("Textile Engineering","Textile");
+                        break;
+                    
+                      case "BBA":
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+		        document.getElementById("sub_subcategory").options[1]=new Option("--------------------","");
+                        document.getElementById("sub_subcategory").options[2]=new Option("Bachlor in Bussiness Adminstration","bba");
+                        break;
+                    case "BCA":
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select course","");
+                        document.getElementById("sub_subcategory").options[1]=new Option("-------------------","");
+		        document.getElementById("sub_subcategory").options[2]=new Option("Bachlor in Computer Application","bca");
+                        break;
+                    
+                    case "BSC":
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+	                document.getElementById("sub_subcategory").options[1]=new Option("-------------------------","");
+                        document.getElementById("sub_subcategory").options[2]=new Option("ComputerScience","cse");
+                        document.getElementById("sub_subcategory").options[3]=new Option("Information Technology","it");
+                        break;
+		 case "MBA":
+                              document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+                              document.getElementById("sub_subcategory").options[1]=new Option("Master in Bussiness Adminstration","bba");
+                        break;
+                    case "MCA":
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select course","");
+                        document.getElementById("sub_subcategory").options[1]=new Option("Master  in Computer Application","bca");
+                        break;
+                    
+                    case "MSC":
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+                        document.getElementById("sub_subcategory").options[1]=new Option("ComputerScience","cse");
+                        document.getElementById("sub_subcategory").options[2]=new Option("Information Technology","it");
+                        break;
+		case "M.tech" :
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+		                document.getElementById("sub_subcategory").options[1]=new Option("------------------------------","");
+                        document.getElementById("sub_subcategory").options[2]=new Option("Aplied Electronics Instrumentation","Aei");
+                        document.getElementById("sub_subcategory").options[3]=new Option("Electrical And Elecronic","eee");
+		                document.getElementById("sub_subcategory").options[4]=new Option("Biotechnology","Bt");
+                        document.getElementById("sub_subcategory").options[5]=new Option("Biomedical","bm");
+                        document.getElementById("sub_subcategory").options[6]=new Option("Chemical Engineering","chemical");
+	                    document.getElementById("sub_subcategory").options[7]=new Option("Civil Engineering","civil");
+                        document.getElementById("sub_subcategory").options[8]=new Option("Computer Science Engineering","cse");
+                        document.getElementById("sub_subcategory").options[9]=new Option("Electrical Engineering","electrical");
+                        document.getElementById("sub_subcategory").options[10]=new Option("Electronics and Telcommunication","etc");
+                        document.getElementById("sub_subcategory").options[11]=new Option("Information Technology","it");
+                        document.getElementById("sub_subcategory").options[12]=new Option("Marine Engineering","marine");
+                        document.getElementById("sub_subcategory").options[13]=new Option("Mertalogical Engineering","mertalogical");
+                        document.getElementById("sub_subcategory").options[14]=new Option("Mechanical Engineering","Mechnical");
+                        document.getElementById("sub_subcategory").options[15]=new Option("Automobile Engineering","automobile");
+                        document.getElementById("sub_subcategory").options[16]=new Option(" Enviormental Engineering","enviormental");
+                        document.getElementById("sub_subcategory").options[17]=new Option("plastic Engineering","Plastic");
+                        document.getElementById("sub_subcategory").options[18]=new Option("Mineral Engineering","Mineral");
+                        document.getElementById("sub_subcategory").options[19]=new Option("Fashion Engineering","Fashion");
+                        document.getElementById("sub_subcategory").options[20]=new Option("Textile Engineering","Textile");
+                        break;
+		case "other1":
+		        document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+		        document.getElementById("sub_subcategory").options[1]=new Option("------------------------------","");
+		        document.getElementById("sub_subcategory").options[2]=new Option("others","others");
+				break;
+                    default:
+                        document.getElementById("sub_subcategory").options[0]=new Option("Please select Branch","");
+                        break;
+                }
+                return true;
+            }
+       </script>
+		</head>
+	<body>
+	<div class="row">
+		
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+		
+		<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title panel-primary">  
+	    Complect Your Profile
+</h3>
+  </div>
+  
+    <form class="form-horizontal custom-form basicform">
+	    <div class="panel-body bg-warning">
+	<fieldset> 
+	        <legend class="bg-info" style="text-align:center;"><h3>Basic Info</h3></legend>  	
+		    <!--First Name-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="fname-input-field">First Name </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+	       	    	<!--Last Name-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="lname-input-field">Last Name </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+	    	    	<!--Date Of Birth-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="dob-input-field">Date Of Birth</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="date">
+                    </div>
+                </div>
+	    <!--***********************Gender*******************************************-->
+                   <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="gender-input-field">Gender </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                      <select class="form-control">
+                                <option value="12" selected="">I am</option>
+                                <option value="13">Male</option>
+                                <option value="14">Female</option>
+		                <option value="12">Others</option>
+                        
+                        </select>    
+                    </div>
+                </div>
+	   <!--*****************************************************************************-->
+
+	    	    	<!--********Email_id*************-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="eid-input-field">Email id </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="email">
+                    </div>
+                </div> 
+	           	<!--***************************-->
+	    
+	    		<!--*****Phone number*******-->
+		     <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="pn-input-field">phone Number </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="number">
+                    </div>
+                </div>
+	
+    	     <!--*********************************-->
+   <div>
+          <legend class="bg-success" style="text-align:center;">Location Info</legend>
+		<!--House number-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="hno-input-field"> House number</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+	       	    	<!--City-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="city-input-field">City Name</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control">
+                                <option value="12" selected="">--choose your city---</option>
+                                
+                        </select>    
+                    </div>
+                </div>
+	    	    	<!--State-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="State-input-field">State Name</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control">
+                                <option value="12" selected="">--choose your State-----</option>
+                                
+                        </select>    
+                    </div>
+                </div>
+	    <!--***********************Country*******************************************-->
+                   <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="country-input-field">Country </label>
+			   </div>
+                    <div class="col-sm-7 input-column">
+                      <select class="form-control">
+                                <option value="12" selected="">----choose your country-----</option>
+                        
+                        </select>    
+                    </div>
+                </div>
+	   <!--*****************************************************************************-->
+
+	    	    	<!--********zip*************-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="pin-input-field">PIN/ZIP</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="number" maxlength="7">
+                    </div>
+                </div>
+		</div>
+		<div>	
+		<legend class="bg-info" style="text-align:center;">Educational Info</legend>
+			
+		 <!--<div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="Hd-input-field"> Highest Degree</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+			     <select class="form-control slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                                <option value="12" selected="">Select Degree</option>
+                                <option value="pg">Post Graduate</option> 
+			    <option value="ug">Under Graduate</option>
+			     <option value="other">Others</option>
+
+                        </select>  
+                        
+                    </div>
+                </div>
+				
+				-->
+				<div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="Hd-input-field"> Highest Degree</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+            <select name="category" class="required-entry form-control" id="category" onChange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+                <option value="">Select Highest Degree </option>
+                <option value="pg">Post Graduate</option>
+               <option value="ug">Under Graduate</option>
+                <option value="others">Others</option>
+            </select>
+        </div>
+				
+				</div>
+				
+	       	    	<!--City-->
+               <!-- <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="course-input-field">Course</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control slct2" id="slct2" onchange="populate1(this.id,'slect3')">
+                                <option value="12" selected="">Course</option>
+                                
+                        </select>    
+                    </div>
+                </div> -->
+				
+				 <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                     <label class="control-label" for="Hd-input-field"> course  </label>
+                    </div>
+                     <div class="col-sm-7 input-column">
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select class="required-entry form-control" name="subcategory" id="subcategory" onchange="javascript: dynamicdropdownone(this.options[this.selectedIndex].value);"><option value="">Please select course</option></select>')
+            </script>
+             </div>
+            <noscript>
+                <select name="subcategory" id="subcategory" >
+                    <option value="">Select the Branch</option>
+                </select>
+            </noscript>
+        </div>
+				
+				
+				
+				
+				
+	    	    	<!--State-->
+              <!--  <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="branch-input-field">Branch</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control slct3" id="slct3">
+                               <option value="12" selected="">choose your Branch</option>
+                                
+                        </select>    
+                    </div>
+                </div>-->
+				
+				
+				
+			<div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="branch-input-field">Branch</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+            <script type="text/javascript" language="JavaScript">
+                document.write('<select class="form-control" name="sub_subcategory" onchange="javascript: urlRedirectTo(this.options[this.selectedIndex].value);" id="sub_subcategory"><option value="">Please select Branch</option></select>')
+            </script>
+            </div>
+            <noscript>
+                <select name="sub_subcategory" id="sub_subcategory" >
+                    <option value="">Please select branch</option>
+                </select>
+            </noscript>
+        </div>
+				
+		</div>
+        
+	
+
+	    </fieldset>
+	    </div>
+         	     </form>
+	    </div>
+	   

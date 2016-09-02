@@ -1,0 +1,239 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="assets/css/styles.css">
+    	<link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
+    	<script src="assets/js/js/jquery-1.11.1.min.js"></script>
+	
+	<script>
+function populate(s1,s2){
+	var s1 = document.getElementById(s1);
+	var s2 = document.getElementById(s2);
+	s2.innerHTML = "";
+	if(s1.value == "pg"){
+		var optionArray = ["-1|Choose Your Option","mtech|Mtech","mba|Mba","mca|Mca","msc|Msc"];
+		
+	} else if(s1.value == "ug")
+	
+	{
+		
+		var optionArray = ["-1|Choose Your Option","BA|B.A","BARCH|B.Arch","BCA|B.C.A","BBA|B.B.A","BTECH|Btech","DIPLOMA|DIPLOMA","OTHER|Other",];
+		
+	} 
+	else if(s1.value == "other"){
+		var optionArray = ["|","other|Other"];
+	}
+	for(var option in optionArray){
+		var pair = optionArray[option].split("|");
+		var newOption = document.createElement("option");
+		newOption.value = pair[0];
+		newOption.innerHTML = pair[1];
+		s2.options.add(newOption);
+	}
+}
+	
+</script>
+	
+	
+	
+	
+	</head>
+	<body>
+	<div class="row">
+		
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+		
+		<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title panel-primary">  
+	    Complect Your Profile
+</h3>
+  </div>
+  
+    <form class="form-horizontal custom-form basicform">
+	    <div class="panel-body bg-warning">
+  <div> 
+	<fieldset> 
+	        <legend class="bg-info" style="text-align:center;"><h3>Basic Info</h3></legend>  	
+		    <!--First Name-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="fname-input-field">First Name </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+	       	    	<!--Last Name-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="lname-input-field">Last Name </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+	    	    	<!--Date Of Birth-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="dob-input-field">Date Of Birth</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="date">
+                    </div>
+                </div>
+	    <!--***********************Gender*******************************************-->
+                   <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="gender-input-field">Gender </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                      <select class="form-control">
+                                <option value="12" selected="">I am</option>
+                                <option value="13">Male</option>
+                                <option value="14">Female</option>
+		                <option value="12">Others</option>
+                        
+                        </select>    
+                    </div>
+                </div>
+	   <!--*****************************************************************************-->
+
+	    	    	<!--********Email_id*************-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="eid-input-field">Email id </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="email">
+                    </div>
+                </div> 
+	           	<!--***************************-->
+	    
+	    		<!--*****Phone number*******-->
+		     <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="pn-input-field">phone Number </label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="number">
+                    </div>
+                </div>
+	
+    	     <!--*********************************-->
+   <div>
+          <legend class="bg-success" style="text-align:center;">Location Info</legend>
+		<!--House number-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="hno-input-field"> House number</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="text">
+                    </div>
+                </div>
+	       	    	<!--City-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="city-input-field">City Name</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control">
+                                <option value="12" selected="">--choose your city---</option>
+                                
+                        </select>    
+                    </div>
+                </div>
+	    	    	<!--State-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="State-input-field">State Name</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control">
+                                <option value="12" selected="">--choose your State-----</option>
+                                
+                        </select>    
+                    </div>
+                </div>
+	    <!--***********************Country*******************************************-->
+                   <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="country-input-field">Country </label>
+			   </div>
+                    <div class="col-sm-7 input-column">
+                      <select class="form-control">
+                                <option value="12" selected="">----choose your country-----</option>
+                        
+                        </select>    
+                    </div>
+                </div>
+	   <!--*****************************************************************************-->
+
+	    	    	<!--********zip*************-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="pin-input-field">PIN/ZIP</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <input class="form-control" type="number" maxlength="7">
+                    </div>
+                </div>
+		</div>
+		<div>	
+		<legend class="bg-info" style="text-align:center;">Educational Info</legend>
+			
+		 <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="Hd-input-field"> Highest Degree</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+			     <select class="form-control slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                                <option value="12" selected="">Select Degree</option>
+                                <option value="pg">Post Graduate</option> 
+			    <option value="ug">Under Graduate</option>
+			     <option value="other">Others</option>
+
+                        </select>  
+                        
+                    </div>
+                </div>
+	       	    	<!--City-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="course-input-field">Course</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control slct2" id="slct2" onchange="populate1(this.id,'slect3')">
+                                <option value="12" selected="">Course</option>
+                                
+                        </select>    
+                    </div>
+                </div>
+	    	    	<!--State-->
+                <div class="form-group">
+                    <div class="col-sm-5 label-column">
+                        <label class="control-label" for="branch-input-field">Branch</label>
+                    </div>
+                    <div class="col-sm-7 input-column">
+                        <select class="form-control slct3" id="slct3">
+                               <option value="12" selected="">choose your Branch</option>
+                                
+                        </select>    
+                    </div>
+                </div>
+		
+		</div>
+
+	    </fieldset>
+	    </div>
+	 
+	</div>
+	    	     </form>
+	    </div>
+	   
